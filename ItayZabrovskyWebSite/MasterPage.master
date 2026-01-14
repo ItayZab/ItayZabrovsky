@@ -24,6 +24,11 @@
             </tr>
             <tr>
                 <td>
+                    <a href="Registry.aspx">Registry.aspx</a> <a href="Default.aspx">Default.aspx</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
