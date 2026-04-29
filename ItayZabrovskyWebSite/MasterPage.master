@@ -11,6 +11,10 @@
         table, td, th {
             border: hidden;
         }
+        img.menu {
+            width:100px;
+            height:50px
+        }
 
     </style>
 </head>
@@ -19,12 +23,14 @@
         <table>
             <tr>
                 <td>
-                    <h1>Fun Games to Pass the Time</h1>
+                    <h1>Cute Cat Pictures</h1>
                 </td>
             </tr>
             <tr>
                 <td>
                     <a href="Registry.aspx">Registry.aspx</a> <a href="Default.aspx">Default.aspx</a>
+                    <a href="HomePage.aspx">
+                        <img class="menu" src="Imgs/Home.png" /></a>
                 </td>
             </tr>
             <tr>

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <h3>Register now and gain access to many games for free</h3><br />
+        <h3>Register now and gain access to many cat pictures for free</h3><br />
         <h4>Create your username & password, and input an Email:</h4><br />
     <form runat="server" method="post">
         <table>
@@ -47,5 +47,6 @@
             </tr>
         </table>
     </form>
+    <%=st %>
 </asp:Content>
 
