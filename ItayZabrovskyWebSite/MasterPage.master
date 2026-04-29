@@ -28,7 +28,8 @@
             </tr>
             <tr>
                 <td>
-                    <a href="Registry.aspx">Registry.aspx</a> <a href="Default.aspx">Default.aspx</a>
+                    <a href="Registry.aspx"><img class="menu" src="Imgs/Register.png" />"</a>
+                    <a href="Gallery.aspx"></a>
                     <a href="HomePage.aspx">
                         <img class="menu" src="Imgs/Home.png" /></a>
                 </td>

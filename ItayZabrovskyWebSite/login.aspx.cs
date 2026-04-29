@@ -17,6 +17,8 @@ public partial class login : System.Web.UI.Page
 
             if (mail == "manager" && pass == "123")
             {
+                Session["Admin"] = "ok";
+                Session["name"] = "Itay";
                 Response.Redirect("Admin.aspx");
             }
             else
@@ -29,6 +31,8 @@ public partial class login : System.Web.UI.Page
                     st = "Not Exist";
                 else
                 {
+                    Session["user"] = "ok";
+                    Session["name"] = dt.Rows[0]["name"];
                     Response.Redirect("HomePage.aspx");
                 }
             }
