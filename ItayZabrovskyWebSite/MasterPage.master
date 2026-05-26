@@ -28,10 +28,10 @@
             </tr>
             <tr>
                 <td>
-                    <a href="Registry.aspx"><img class="menu" src="Imgs/Register.png" />"</a>
-                    <a href="Gallery.aspx"></a>
-                    <a href="HomePage.aspx">
-                        <img class="menu" src="Imgs/Home.png" /></a>
+                    <a href="Registry.aspx"><img class="menu" src="Imgs/Register.png" /></a>
+                    <a href="HomePage.aspx"><img class="menu" src="Imgs/Home.png" /></a>
+                    <a href="Gallery.aspx"><img class="menu" src="Imgs/Gallery.png" /></a>
+
                 </td>
             </tr>
             <tr>
