@@ -103,7 +103,7 @@
                 <td>
                     <input type="text" name="mail" id="mail" />
                 </td>
-                <td></td>
+                <td id="mailErr"></td>
             </tr>
             <tr>
                 <th>Gender:</th>

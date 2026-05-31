@@ -1,57 +1,81 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Gallery.aspx.cs" Inherits="Gallery" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
     <style type="text/css">
-        /* עיצוב קל לטבלה כדי שהתמונות יראו טוב וממורכזות */
         .gallery-table {
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 15px; /* רווח בין התמונות */
+            border-collapse: separate; /* Lets each cell maintain a gap between other adjacent cells */
+            border-spacing: 15px; /* Spacing between pictures */
         }
-        .gallery-table td {
-            text-align: center;
-            vertical-align: middle;
-            background-color: #f9f9f9; /* רקע בהיר לכל תא, דומה לטפסים */
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 8px;
-        }
+
+            .gallery-table td {
+                width: 50%;
+                flex-direction: row; /* Standard row alignment (Image left, text right) */
+                align-items: center; /* Vertically centers image and text next to each other */
+                text-align: left; /* Ensures description text reads cleanly left-to-right */
+                background-color: #f9f9f9; /* Adds a background color to the table */
+                border: 1px solid #ddd; /* Defines the width, color and style of the table border */
+                padding: 15px; /* Slightly more breathing room inside the box */
+                border-radius: 8px; /* Makes the corners of each border round */
+            }
+
         .gallery-img {
-            width: 200px; /* הגדרת רוחב קבוע לתמונות */
-            height: 150px; /* הגדרת גובה קבוע כדי שהכל יהיה סימטרי */
-            object-fit: cover; /* שומר על פרופורציות התמונה ומקצץ שוליים אם צריך */
-            border-radius: 4px;
+            width: 200px; /* Sets a constant width for all images */
+            height: 150px; /* Sets a constant height for all images */
+            object-fit: cover; /* Preserves the image's proportions and crops the edges if necessary */
+            border-radius: 4px; /* Makes the corners of each border round */
+        }
+
+        .cat-description {
+            margin-left: 15px; /* Creates a gap between the image and the text */
+            display: flex; /* Forces inner items side-by-side */
+            flex-direction: column; /* Allows the text lines to stack on top of each other */
+            gap: 5px; /* Adds small spacing between title and subtitle text */
+        }
+
+        .cat-title {
+            font-weight: bold; /**/
+            font-size: 1.1em; /**/
+            color: #333; /**/
         }
     </style>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-    <h3>Welcome to the Cat Gallery</h3><br />
-    <h4>Enjoy our collection of beautiful cat pictures:</h4><br />
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <h3>Welcome to the Cat Gallery</h3>
+    <br />
+    <h4>Enjoy our collection of beautiful cat pictures, each with information on the cat breed:</h4>
+    <br />
 
     <table class="gallery-table">
         <tr>
             <td>
-                <img src="1.jpg" alt="Cat 1" class="gallery-img" /><br />
-                <span>Cute Cat 1</span>
+                <a href="https://en.wikipedia.org/wiki/Ragdoll">
+                    <img class="gallery-img" alt="Ragdoll_Cat_Wikipedia" src="Imgs/Ragdoll%20Cat.jpg" />
+                </a>
+                <div class="cat-description">
+                    <span class="cat-title">The Ragdoll</span>
+                    <span>Lorem Ipsum</span>
+                </div>
             </td>
             <td>
                 <img src="2.jpg" alt="Cat 2" class="gallery-img" /><br />
                 <span>Cute Cat 2</span>
             </td>
+        </tr>
+        <tr>
             <td>
                 <img src="3.jpg" alt="Cat 3" class="gallery-img" /><br />
                 <span>Cute Cat 3</span>
             </td>
-        </tr>
-        
-        <tr>
             <td>
                 <img src="4.jpg" alt="Cat 4" class="gallery-img" /><br />
                 <span>Cute Cat 4</span>
             </td>
+        </tr>
+        <tr>
             <td>
                 <img src="5.jpg" alt="Cat 5" class="gallery-img" /><br />
                 <span>Cute Cat 5</span>
