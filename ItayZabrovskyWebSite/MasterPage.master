@@ -5,20 +5,30 @@
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
         table, td, th {
             border: hidden;
         }
+
         img.menu {
-            width:100px;
-            height:50px
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            vertical-align: middle;
         }
 
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+    <% if (Session["Admin"] == "ok" || Session["user"] == "ok")
+        {  %>
+    שלום <%=Session["name"] %>
+    <%} %>
     <center>
         <table>
             <tr>
@@ -28,19 +38,37 @@
             </tr>
             <tr>
                 <td>
-                    <a href="Registry.aspx"><img class="menu" src="Imgs/Register.png" /></a>
-                    <a href="HomePage.aspx"><img class="menu" src="Imgs/Home.png" /></a>
-                    <a href="Gallery.aspx"><img class="menu" src="Imgs/Gallery.png" /></a>
-
+                    <% if (!(Session["Admin"] == "ok" || Session["user"] == "ok"))
+                        {  %>
+                    <a href="Registry.aspx">
+                        <img class="menu" src="Imgs/Register.png" />
+                    </a>
+                    <a href="Login.aspx">
+                        <img class="menu" src="Imgs/LogIn.png" />
+                    </a>
+                    <%  } %>
+                    <a href="HomePage.aspx">
+                        <img class="menu" src="Imgs/Home.png" /></a>
+                    <% if (Session["Admin"] == "ok" || Session["user"] == "ok")
+                        { %>
+                    <a href="Gallery.aspx">
+                        <img class="menu" src="Imgs/Gallery.png" />
+                    </a>
+                    <a href="Logout.aspx">
+                        <img class="menu" src="Imgs/LogOut.png" />
+                    </a>
+                    <%  } %>
+                    <a href="AboutUs.aspx">
+                        <img class="menu" src="Imgs/AboutUs.png" />
+                    </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
-                <td>
-                </td>
+                <td></td>
             </tr>
         </table>
     </center>
