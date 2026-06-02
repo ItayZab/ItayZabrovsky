@@ -10,18 +10,20 @@
 <form runat="server" method="post">
     <table>
         <tr>
-            <th>Username:</th>
+            <th>Email:</th>
             <td>
-                <input type="text" name="user" id="user" />
+                <input type="text" name="mail" id="user" />
             </td>
             <td></td>
         </tr>
         <tr>
             <th>Password:</th>
             <td>
-                <input type="text" name="pass" id="pass" />
+                <input type="password" name="pass" id="pass" />
             </td>
-            <td></td>
+            <td>
+
+            </td>
         </tr>
 
         <tr>

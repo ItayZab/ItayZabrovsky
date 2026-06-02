@@ -5,13 +5,19 @@
         function checkAll() {
             userErr.innerHTML = "";
             passErr.innerHTML = "";
+            mailErr.innerHTML = "";
 
             result = true;
 
-            if (checkUsername() == false)
+            if (checkUsername() == false) {
                 result = false;
-            if (checkPassword() == false)
+            }
+            if (checkPassword() == false) {
                 result = false;
+            }
+            if (checkEmail() == false) {
+                result = false;
+            }
 
             return result;
         }
@@ -43,6 +49,7 @@
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -73,9 +80,28 @@
                 errSpace.style.color = "red";
                 return false;
             }
+
             return true;
         }
 
+        function checkEmail() {
+            var mail = document.getElementById("mail").value;
+            var errSpace = document.getElementById("mailErr");
+
+            if (mail.length == 0) {
+                errSpace.innerHTML = "Email cannot be empty";
+                errSpace.style.color = "red";
+                return false;
+            }
+
+            if (mail.indexOf("@") == -1 || mail.indexOf(".") == -1) {
+                errSpace.innerHTML = "Email must contain '@' and '.' characters";
+                errSpace.style.color = "red";
+                return false;
+            }
+
+            return true;
+        }
 
     </script>
 </asp:Content>
