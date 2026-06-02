@@ -3,13 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
     <style type="text/css">
+
         .gallery-table {
             width: 100%;
             border-collapse: separate; /* Lets each cell maintain a gap between other adjacent cells */
             border-spacing: 15px; /* Spacing between pictures */
         }
 
-            .gallery-table td {
+        .gallery-table td {
                 width: 50%;
                 flex-direction: row; /* Standard row alignment (Image left, text right) */
                 align-items: center; /* Vertically centers image and text next to each other */
@@ -39,14 +40,14 @@
             font-size: 1.1em; /**/
             color: #333; /**/
         }
+
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
     <h3>Welcome to the Cat Gallery</h3>
     <br />
-    <h4>Enjoy our collection of beautiful cat pictures, each with information on the cat breed:</h4>
+    <h3>Enjoy our collection of beautiful cat pictures, each with information on the cat breed:</h3>
     <br />
 
     <table class="gallery-table">
@@ -86,6 +87,15 @@
             </td>
         </tr>
     </table>
-
+    <br />
+    <h3>What is your favourite cat breed from the ones above?</h3>
+    <select>
+        <option value="">Ragdoll</option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </select>
 </asp:Content>
 
