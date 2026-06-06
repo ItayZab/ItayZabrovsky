@@ -5,13 +5,13 @@
     <style type="text/css">
 
         .gallery-table {
-            width: 100%;
+            width: 100%; /* Controls the width of the table itself */
             border-collapse: separate; /* Lets each cell maintain a gap between other adjacent cells */
             border-spacing: 15px; /* Spacing between pictures */
         }
 
         .gallery-table td {
-                width: 50%;
+                width: 50%; /* Controls the width of each individual cell */
                 flex-direction: row; /* Standard row alignment (Image left, text right) */
                 align-items: center; /* Vertically centers image and text next to each other */
                 text-align: left; /* Ensures description text reads cleanly left-to-right */
@@ -42,9 +42,9 @@
         }
 
         .cat-title {
-            font-weight: bold; /**/
-            font-size: 1.1em; /**/
-            color: #333; /**/
+            font-weight: bold; /* Changes the weight of the font of the text, making it bold (ctrl + B) */
+            font-size: 1.1em; /* Controls the size of the characters in the text */
+            color: #333; /* Controls the color of the characters in the text */
         }
 
         .so-many-flexboxes {
@@ -52,11 +52,12 @@
             flex-direction: row; /* Stacks the text and dropdownlist horizontally */
             align-items: center; /* Aligns items to the left */
             gap: 10px; /* Adds spacing between the heading and dropdown */
+            margin-bottom: 80px; /* Adds a gap between the bottom of the text & dropdown list to the bottom of the page */
         }
 
         .so-many-flexboxes h3 {
             margin: 0px; /* Adds a margin on bottom & top of text (in this case makes it nonexistent) */
-            padding: 0px; 
+            padding: 0px; /* Adds a space between the content of a container to its border (in this case making it nonexistent) */
         }
 
     </style>
@@ -77,7 +78,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The Ragdoll</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        These are large, heavily built cats with a remarkably soft semi-long coat and striking, vivid blue oval eyes.
+                        They were named "Ragdoll" because of their unique tendency to go completely limp and relaxed in your arms when picked up.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -88,7 +92,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The Maine Coon</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        They are massive, rugged cats featuring a shaggy weather-resistant coat, a long bushy tail, and large tufted ears adapted for cold weather.
+                        Their name combines their presumed state of origin (Maine) with an old folktale that they were the result of a cross between a semi-wild cat and a raccoon.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -101,7 +108,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The Exotic Shorthair</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        They have a compact, heavily boned body with a round head, a distinctively flat face, and a short, incredibly dense "plush" coat.
+                        They were named "Exotic" because they introduced an unusual, foreign shorthair look to the Persian breed line during experimental breeding programs in the 1960s.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -112,7 +122,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The Persian Cat</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        This breed is famous for its long, flowing, luxurious double coat, stubby legs, and a wide, flat face with a tiny button nose.
+                        They are named directly after their historical country of origin, Persia (modern-day Iran), from where they were first imported to Europe in the 1600s.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -125,7 +138,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The Devon Rex</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        They possess a unique "elfin" appearance characterized by oversized ears, prominent cheekbones, and a short, fragile coat of rippled, wavy fur.
+                        The name highlights Devonshire, England, where the foundational kitten of the breed was discovered, combined with "Rex," a genetic term used for animals born with curly fur.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -136,7 +152,10 @@
                 </a>
                 <div class="cat-description">
                     <span class="cat-title">The British Shorthair</span>
-                    <span>Lorem Ipsum</span>
+                    <span>
+                        They feature a sturdy, muscular "cobby" build with a broad chest, a perfectly round head, chubby cheeks, and a very thick, crisp coat.
+                        They are named for being the native, standardized version of the traditional domestic shorthaired alley cats found across Great Britain.
+                    </span>
                 </div>
                 </div>
             </td>
@@ -146,7 +165,13 @@
     <div class="so-many-flexboxes">
     <h3>What is your favourite cat breed from the ones above:</h3>
     <select>
-        <option value="" selected disabled>Select cat breed here</option>
+        <option value="" selected disabled hidden>Select cat breed here</option>
+        <%--The selected tag makes this option be the first to show up in the box of the dropdownlist.--%>
+        <%--The disabled tag makes users unable to choose the option in the dropdownlist.--%>
+        <%--Do note that without adding the hidden tag, the disabled option can still be seen inside--%>
+        <%--the table of options for the dropdownlist.--%>
+        <%--To make the option not show up, we add the hidden tag, which makes it it not show up in--%>
+        <%--the table of choices of the dropdownlist.--%>
         <option value="">Ragdoll</option>
         <option value="">Maine Coon</option>
         <option value="">Exotic Shorthair</option>
